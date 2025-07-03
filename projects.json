@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Блокчейн-интеграция для финтеха",
+    "description": "Микросервисное решение для интеграции блокчейн-технологий в финансовые продукты с использованием .NET 8, Nethereum, Kafka и MassTransit для обеспечения высокой производительности и масштабируемости.",
+    "link": "https://github.com/viknsagit/blockchain-integration",
+    "img": "project-blockchain.png",
+    "tags": [".NET 8", "Nethereum", "Kafka", "MassTransit", "MongoDB"]
+  },
+  {
+    "title": "Система аутентификации с Keycloak",
+    "description": "Комплексная система аутентификации и управления доступом для корпоративных приложений на базе ASP.NET Core с интеграцией Keycloak, поддержкой OAuth2, OpenID Connect и RBAC.",
+    "link": "https://github.com/viknsagit/keycloak-auth-system",
+    "img": "project-auth.png",
+    "tags": ["ASP.NET Core", "Keycloak", "OAuth2", "OIDC", "Redis"]
+  },
+  {
+    "title": "Кроссплатформенное приложение на .NET MAUI",
+    "description": "Универсальное бизнес-приложение с единым кодом для iOS, Android, Windows и macOS. Реализовано с использованием .NET MAUI, Blazor и подключением к REST API.",
+    "link": "https://github.com/viknsagit/maui-cross-platform",
+    "img": "project-maui.png",
+    "tags": [".NET MAUI", "Blazor", "C#", "REST API", "MVVM"]
+  },
+  {
+    "title": "Реал-тайм чат на SignalR",
+    "description": "Высокопроизводительный чат с функциями групповых сообщений, уведомлений и обмена файлами. Реализован с использованием ASP.NET Core, SignalR и MongoDB для хранения истории сообщений.",
+    "link": "https://github.com/viknsagit/signalr-chat",
+    "img": "project-chat.png",
+    "tags": ["SignalR", "ASP.NET Core", "MongoDB", "WebSockets", "JWT"]
+  },
+  {
+    "title": "API с архитектурой CQRS и MediatR",
+    "description": "Высоконагруженное API с разделением операций чтения и записи, асинхронной обработкой событий и оптимизированными запросами к базе данных PostgreSQL.",
+    "link": "https://github.com/viknsagit/cqrs-api",
+    "img": "project-api.png",
+    "tags": ["MediatR", "CQRS", "ASP.NET Core", "PostgreSQL", "xUnit"]
+  }
+]

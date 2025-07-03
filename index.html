@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viknsagit — Backend .NET Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <div class="logo-icon">VS</div>
+                    <div class="logo-text">viknsagit<span class="logo-dot">.</span>dev</div>
+                </a>
+                
+                <nav class="nav">
+                    <a href="#about" class="nav-link">Обо мне</a>
+                    <a href="#tech" class="nav-link">Технологии</a>
+                    <a href="#experience" class="nav-link">Опыт</a>
+                    <a href="#projects" class="nav-link">Проекты</a>
+                    <a href="#contacts" class="nav-link">Контакты</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                        <i class="ri-moon-line"></i>
+                    </button>
+                    <button id="lang-toggle" class="lang-toggle" aria-label="Переключить язык">EN</button>
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Мобильное меню">
+                        <span class="hamburger-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-container">
+            <nav class="mobile-nav">
+                <a href="#about" class="mobile-nav-link">Обо мне</a>
+                <a href="#tech" class="mobile-nav-link">Технологии</a>
+                <a href="#experience" class="mobile-nav-link">Опыт</a>
+                <a href="#projects" class="mobile-nav-link">Проекты</a>
+                <a href="#contacts" class="mobile-nav-link">Контакты</a>
+            </nav>
+            <div class="mobile-actions">
+                <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <button id="mobile-lang-toggle" class="lang-toggle" aria-label="Переключить язык">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-info">
+                        <div class="hero-tag">.NET Specialist</div>
+                        <h1 class="hero-title">
+                            <span>Backend</span> Developer
+                        </h1>
+                        <p class="hero-description">Разрабатываю надежные и масштабируемые решения на платформе .NET с фокусом на производительность и безопасность</p>
+                        
+                        <div class="hero-badges">
+                            <div class="badge">
+                                <i class="ri-map-pin-line"></i>
+                                <span>Россия, удалённая работа</span>
+                            </div>
+                            <div class="badge">
+                                <i class="ri-calendar-line"></i>
+                                <span>Опыт работы: 2+ года</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>Мои проекты</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                            <a href="#contacts" class="btn btn-outline">
+                                <span>Связаться</span>
+                            </a>
+                        </div>
+                        
+                        <div class="hero-socials">
+                            <a href="https://github.com/viknsagit" target="_blank" class="social-link">
+                                <i class="ri-github-fill"></i>
+                            </a>
+                            <a href="https://t.me/viknsagit" target="_blank" class="social-link">
+                                <i class="ri-telegram-fill"></i>
+                            </a>
+                            <a href="mailto:viknsagitariuswork@gmail.com" class="social-link">
+                                <i class="ri-mail-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="avatar-container">
+                            <img src="avatar.png" alt="viknsagit" class="avatar">
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="tech-badges">
+                            <span class="tech-badge">.NET</span>
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">ASP.NET</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Кто я</span>
+                    <h2 id="about-title" class="section-title">Обо мне</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Привет! Я — опытный Backend .NET разработчик с более чем 2-летним стажем в создании надежных серверных решений. Моя специализация — разработка высоконагруженных и масштабируемых приложений с использованием современных технологий .NET платформы.</p>
+                        <p>Ценю чистый код, микросервисную архитектуру и автоматизированное тестирование. Мне нравится решать сложные технические проблемы и внедрять современные подходы в разработке.</p>
+                    </div>
+                    <div class="code-card">
+                        <div class="code-header">
+                            <span>viknsagit.cs</span>
+                            <div class="code-buttons">
+                                <span class="code-button"></span>
+                                <span class="code-button"></span>
+                                <span class="code-button"></span>
+                            </div>
+                        </div>
+                        <pre><code>public class Developer 
+{
+    public string Name { get; } = "viknsagit";
+    public string Role { get; } = "Backend .NET Developer";
+    public string[] Skills { get; } = new[] {
+        "C#", "ASP.NET Core", "EF Core", "SQL", 
+        "Docker", "CI/CD", "MongoDB"
+    };
+
+    public Task&lt;Solution&gt; SolveProblem(Problem problem)
+    {
+        return Task.FromResult(new Solution(
+            clean: true,
+            scalable: true,
+            performant: true
+        ));
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Инструменты</span>
+                    <h2 id="tech-title" class="section-title">Мой стек</h2>
+                </div>
+                
+                <div class="tech-tabs">
+                    <button class="tech-tab active" data-category="all">Все</button>
+                    <button class="tech-tab" data-category="langs">Языки</button>
+                    <button class="tech-tab" data-category="frameworks">Фреймворки</button>
+                    <button class="tech-tab" data-category="db">Базы данных</button>
+                    <button class="tech-tab" data-category="devops">DevOps</button>
+                </div>
+                
+                <div class="tech-container">
+                    <div class="tech-category" data-category="langs">
+                        <h3 class="category-title">
+                            <i class="ri-code-s-slash-line category-icon"></i>
+                            <span>Языки программирования</span>
+                        </h3>
+                        
+                        <div class="tech-cards">
+                            <div class="tech-card" data-tags="lang">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-hashtag"></i>
+                                    </div>
+                                    <h4>C#</h4>
+                                    <span class="tech-version">.NET 5/6/7/8/9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category" data-category="frameworks">
+                        <h3 class="category-title">
+                            <i class="ri-stack-line category-icon"></i>
+                            <span>Фреймворки и технологии</span>
+                        </h3>
+                        
+                        <div class="tech-cards">
+                            <div class="tech-card" data-tags="framework web">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-server-line"></i>
+                                    </div>
+                                    <h4>ASP.NET Core</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="framework web">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                    <h4>Blazor</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="framework orm">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-database-2-line"></i>
+                                    </div>
+                                    <h4>Entity Framework Core</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="framework real-time">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-broadcast-line"></i>
+                                    </div>
+                                    <h4>SignalR</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="framework messaging">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-bus-line"></i>
+                                    </div>
+                                    <h4>MassTransit</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="framework pattern">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-mail-send-line"></i>
+                                    </div>
+                                    <h4>MediatR</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="framework messaging">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-chat-forward-line"></i>
+                                    </div>
+                                    <h4>Kafka</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="framework blockchain">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-ethereum-line"></i>
+                                    </div>
+                                    <h4>Nethereum</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category" data-category="db">
+                        <h3 class="category-title">
+                            <i class="ri-database-line category-icon"></i>
+                            <span>Базы данных</span>
+                        </h3>
+                        
+                        <div class="tech-cards">
+                            <div class="tech-card" data-tags="database nosql">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-leaf-line"></i>
+                                    </div>
+                                    <h4>MongoDB</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="database sql">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-database-2-line"></i>
+                                    </div>
+                                    <h4>PostgreSQL</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="database sql">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-microsoft-line"></i>
+                                    </div>
+                                    <h4>MS SQL</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="database nosql cache">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-redis-line"></i>
+                                    </div>
+                                    <h4>Redis</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category" data-category="devops">
+                        <h3 class="category-title">
+                            <i class="ri-tools-line category-icon"></i>
+                            <span>DevOps и инструменты</span>
+                        </h3>
+                        
+                        <div class="tech-cards">
+                            <div class="tech-card" data-tags="devops container">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-ship-line"></i>
+                                    </div>
+                                    <h4>Docker</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="devops git">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-git-branch-line"></i>
+                                    </div>
+                                    <h4>Git</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="devops ci-cd">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-restart-line"></i>
+                                    </div>
+                                    <h4>CI/CD</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-card" data-tags="devops testing">
+                                <div class="tech-card-inner">
+                                    <div class="tech-icon">
+                                        <i class="ri-test-tube-line"></i>
+                                    </div>
+                                    <h4>xUnit</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Карьера</span>
+                    <h2 id="experience-title" class="section-title">Опыт работы</h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023 — настоящее время</div>
+                            <h3 class="timeline-title">Senior Backend Developer</h3>
+                            <div class="timeline-company">FinTech Solutions</div>
+                            <p class="timeline-description">Разработка высоконагруженных микросервисов для финтех-платформы с использованием .NET 8, ASP.NET Core и NoSQL баз данных. Интеграция с блокчейн-технологиями, оптимизация производительности и масштабирование системы.</p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">ASP.NET Core</span>
+                                <span class="timeline-tag">Микросервисы</span>
+                                <span class="timeline-tag">MongoDB</span>
+                                <span class="timeline-tag">Kafka</span>
+                                <span class="timeline-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2021 — 2023</div>
+                            <h3 class="timeline-title">Backend Developer</h3>
+                            <div class="timeline-company">DataTech Corp</div>
+                            <p class="timeline-description">Разработка и поддержка RESTful API для корпоративной системы управления данными. Реализация бизнес-логики, интеграция с внешними сервисами, оптимизация SQL-запросов и миграция с .NET Framework на .NET 6.</p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">ASP.NET Core</span>
+                                <span class="timeline-tag">Entity Framework</span>
+                                <span class="timeline-tag">MS SQL</span>
+                                <span class="timeline-tag">Redis</span>
+                                <span class="timeline-tag">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020 — 2021</div>
+                            <h3 class="timeline-title">Junior .NET Developer</h3>
+                            <div class="timeline-company">WebSolutions</div>
+                            <p class="timeline-description">Участие в разработке веб-приложений на ASP.NET Core. Реализация функционала по ТЗ, написание Unit-тестов, работа с ORM, багфиксинг и документирование API.</p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">C#</span>
+                                <span class="timeline-tag">ASP.NET Core</span>
+                                <span class="timeline-tag">xUnit</span>
+                                <span class="timeline-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Портфолио</span>
+                    <h2 id="projects-title" class="section-title">Проекты</h2>
+                </div>
+                
+                <div class="project-filters">
+                    <button class="project-filter active" data-filter="all">Все</button>
+                    <button class="project-filter" data-filter="api">API</button>
+                    <button class="project-filter" data-filter="microservices">Микросервисы</button>
+                    <button class="project-filter" data-filter="blockchain">Блокчейн</button>
+                    <button class="project-filter" data-filter="desktop">Десктоп</button>
+                </div>
+                
+                <div class="projects-grid" id="projects-container">
+                    <!-- Проекты будут загружены из projects.json через JavaScript -->
+                </div>
+                
+                <template id="project-card-template">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="" alt="">
+                            <div class="project-overlay">
+                                <a href="" class="project-link" target="_blank">
+                                    <i class="ri-github-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                            <div class="project-tags"></div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+        
+        <section id="contacts" class="contacts-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Связь</span>
+                    <h2 id="contacts-title" class="section-title">Контакты</h2>
+                </div>
+                
+                <div class="contacts-content">
+                    <div class="contact-info">
+                        <p>Всегда открыт для обсуждения интересных проектов и предложений о сотрудничестве. Не стесняйтесь связаться со мной любым удобным способом:</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="ri-mail-line"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <a href="mailto:viknsagitariuswork@gmail.com">viknsagitariuswork@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="ri-telegram-line"></i>
+                                <div>
+                                    <h3>Telegram</h3>
+                                    <a href="https://t.me/viknsagit" target="_blank">@viknsagit</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="ri-github-line"></i>
+                                <div>
+                                    <h3>GitHub</h3>
+                                    <a href="https://github.com/viknsagit" target="_blank">github.com/viknsagit</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-action">
+                            <a href="mailto:viknsagitariuswork@gmail.com" class="btn btn-primary">
+                                <span>Написать мне</span>
+                                <i class="ri-send-plane-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit">
+                                <span>Отправить</span>
+                                <i class="ri-send-plane-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">VS</div>
+                    <div class="logo-text">viknsagit<span class="logo-dot">.</span>dev</div>
+                </div>
+                
+                <nav class="footer-nav">
+                    <a href="#about" class="footer-nav-link">Обо мне</a>
+                    <a href="#tech" class="footer-nav-link">Технологии</a>
+                    <a href="#experience" class="footer-nav-link">Опыт</a>
+                    <a href="#projects" class="footer-nav-link">Проекты</a>
+                    <a href="#contacts" class="footer-nav-link">Контакты</a>
+                </nav>
+                
+                <div class="footer-socials">
+                    <a href="https://github.com/viknsagit" class="footer-social-link" target="_blank">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                    <a href="https://t.me/viknsagit" class="footer-social-link" target="_blank">
+                        <i class="ri-telegram-fill"></i>
+                    </a>
+                    <a href="mailto:viknsagitariuswork@gmail.com" class="footer-social-link">
+                        <i class="ri-mail-fill"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 viknsagit. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tech-category">
+                        <h3>
+                            <span class="category-icon"><i class="ri-database-line"></i></span>
+                            <span>Базы данных</span>
+                        </h3>
+                        <div class="tech-grid">
+                            <div class="tech-card" data-tech="MongoDB">
+                                <div class="tech-icon">
+                                    <i class="ri-leaf-line"></i>
+                                </div>
+                                <h4>MongoDB</h4>
+                            </div>
+                            <div class="tech-card" data-tech="PostgreSQL">
+                                <div class="tech-icon">
+                                    <i class="ri-database-fill"></i>
+                                </div>
+                                <h4>PostgreSQL</h4>
+                            </div>
+                            <div class="tech-card" data-tech="MSSQL">
+                                <div class="tech-icon">
+                                    <i class="ri-database-line"></i>
+                                </div>
+                                <h4>MSSQL</h4>
+                            </div>
+                            <div class="tech-card" data-tech="Redis">
+                                <div class="tech-icon">
+                                    <i class="ri-rocket-line"></i>
+                                </div>
+                                <h4>Redis</h4>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tech-category">
+                        <h3>
+                            <span class="category-icon"><i class="ri-tools-line"></i></span>
+                            <span>DevOps и инструменты</span>
+                        </h3>
+                        <div class="tech-grid">
+                            <div class="tech-card" data-tech="Docker">
+                                <div class="tech-icon">
+                                    <i class="ri-ship-line"></i>
+                                </div>
+                                <h4>Docker</h4>
+                            </div>
+                            <div class="tech-card" data-tech="Git">
+                                <div class="tech-icon">
+                                    <i class="ri-git-branch-line"></i>
+                                </div>
+                                <h4>Git</h4>
+                            </div>
+                            <div class="tech-card" data-tech="CI/CD">
+                                <div class="tech-icon">
+                                    <i class="ri-loop-left-line"></i>
+                                </div>
+                                <h4>CI/CD</h4>
+                            </div>
+                            <div class="tech-card" data-tech="Testing">
+                                <div class="tech-icon">
+                                    <i class="ri-test-tube-line"></i>
+                                </div>
+                                <h4>xUnit</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Карьера</span>
+                    <h2 id="experience-title" class="section-title">Опыт работы</h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-year">2024 — 2025</span>
+                                <div class="timeline-title">
+                                    <h3>Senior Backend Developer</h3>
+                                    <span class="company-name">Финтех-стартап</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <ul class="timeline-list">
+                                    <li>Разработка микросервисной архитектуры с использованием MassTransit и Kafka</li>
+                                    <li>Интеграция с блокчейн через Nethereum</li>
+                                    <li>Внедрение CI/CD и оптимизация производительности приложений</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="tag">.NET 8</span>
+                                    <span class="tag">ASP.NET Core</span>
+                                    <span class="tag">Kafka</span>
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">MassTransit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-year">2023 — 2024</span>
+                                <div class="timeline-title">
+                                    <h3>Backend Developer</h3>
+                                    <span class="company-name">IT-компания</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <ul class="timeline-list">
+                                    <li>Разработка API для корпоративных клиентов</li>
+                                    <li>Интеграция с Keycloak для аутентификации</li>
+                                    <li>Работа с MongoDB и Redis для хранения и кэширования данных</li>
+                                    <li>Реализация реал-тайм коммуникации через SignalR</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="tag">.NET 7</span>
+                                    <span class="tag">MongoDB</span>
+                                    <span class="tag">SignalR</span>
+                                    <span class="tag">Redis</span>
+                                    <span class="tag">Keycloak</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-year">2022 — 2023</span>
+                                <div class="timeline-title">
+                                    <h3>.NET Developer</h3>
+                                    <span class="company-name">Проектная работа</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <ul class="timeline-list">
+                                    <li>Разработка кроссплатформенных приложений с использованием .NET MAUI и Avalonia</li>
+                                    <li>Реализация REST API на ASP.NET Core</li>
+                                    <li>Работа с базами данных PostgreSQL и MSSQL через Entity Framework Core</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="tag">.NET 6</span>
+                                    <span class="tag">EF Core</span>
+                                    <span class="tag">Blazor</span>
+                                    <span class="tag">PostgreSQL</span>
+                                    <span class="tag">gRPC</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Работы</span>
+                    <h2 id="projects-title" class="section-title">Проекты</h2>
+                </div>
+                
+                <div id="projects-filter" class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="api">API</button>
+                    <button class="filter-btn" data-filter="microservices">Микросервисы</button>
+                    <button class="filter-btn" data-filter="app">Приложения</button>
+                </div>
+                
+                <div id="projects-list" class="projects-grid">
+                    <!-- Проекты будут подгружаться через JS -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacts" class="contacts-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Связаться</span>
+                    <h2 id="contacts-title" class="section-title">Контакты</h2>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p class="contact-text">Всегда открыт для обсуждения интересных проектов и предложений о сотрудничестве. Напишите мне!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <h3>Email</h3>
+                                    <a href="mailto:viknsagitariuswork@gmail.com">viknsagitariuswork@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="ri-telegram-line"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <h3>Telegram</h3>
+                                    <a href="https://t.me/viknsagit" target="_blank">@viknsagit</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="ri-github-line"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <h3>GitHub</h3>
+                                    <a href="https://github.com/viknsagit" target="_blank">github.com/viknsagit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-header">
+                                <i class="ri-message-2-line"></i>
+                                <h3>Напишите мне</h3>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" name="name" placeholder="Ваше имя">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Ваш email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Ваше сообщение"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">{</span> 
+                    <span class="logo-text">viknsagit</span> 
+                    <span class="logo-bracket">}</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#about">Обо мне</a>
+                    <a href="#tech">Технологии</a>
+                    <a href="#experience">Опыт</a>
+                    <a href="#projects">Проекты</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span class="highlight">viknsagit</span> — Backend .NET Developer</p>
+                <div class="footer-socials">
+                    <a href="mailto:viknsagitariuswork@gmail.com" class="social-link" title="Email">
+                        <i class="ri-mail-line"></i>
+                    </a>
+                    <a href="https://github.com/viknsagit" class="social-link" target="_blank" title="GitHub">
+                        <i class="ri-github-line"></i>
+                    </a>
+                    <a href="https://t.me/viknsagit" class="social-link" target="_blank" title="Telegram">
+                        <i class="ri-telegram-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+    
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-bracket">{</span> 
+                <span class="logo-text">viknsagit</span> 
+                <span class="logo-bracket">}</span>
+            </div>
+            <button class="mobile-menu-close">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#about" class="mobile-nav-item">Обо мне</a>
+            <a href="#tech" class="mobile-nav-item">Технологии</a>
+            <a href="#experience" class="mobile-nav-item">Опыт</a>
+            <a href="#projects" class="mobile-nav-item">Проекты</a>
+            <a href="#contacts" class="mobile-nav-item">Контакты</a>
+        </nav>
+        <div class="mobile-footer">
+            <div class="mobile-socials">
+                <a href="mailto:viknsagitariuswork@gmail.com" class="social-link" title="Email">
+                    <i class="ri-mail-line"></i>
+                </a>
+                <a href="https://github.com/viknsagit" class="social-link" target="_blank" title="GitHub">
+                    <i class="ri-github-line"></i>
+                </a>
+                <a href="https://t.me/viknsagit" class="social-link" target="_blank" title="Telegram">
+                    <i class="ri-telegram-line"></i>
+                </a>
+            </div>
+            <div class="mobile-theme-toggle">
+                <button id="mobile-theme-toggle" title="Переключить тему"><i class="ri-moon-line"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Overlay для мобильного меню -->
+    <div class="menu-overlay"></div>
+</body>
+</html>
