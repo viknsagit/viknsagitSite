@@ -519,19 +519,16 @@ code, pre {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     line-height: 1.1;
     margin-bottom: var(--spacing-lg);
-    font-weight: var(--font-weight-extrabold);
+    font-weight: 700;
+    color: var(--text-primary);
 }
 
-.hero-title span {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
+/* Удаляем все эффекты после заголовка */
+
+/* Удалены неиспользуемые стили */
 
 .hero-description {
     color: var(--text-secondary);
@@ -1166,7 +1163,7 @@ body.dark-theme .projects-section {
     color: var(--text-secondary);
     font-size: 1.125rem;
     margin-bottom: var(--spacing-xl);
-    max-width: 500px;
+    max-width: var(--spacing-xl);
 }
 
 .contact-methods {
@@ -1342,7 +1339,7 @@ body.dark-theme .footer {
 --------------------------------------------------------------*/
 @media screen and (max-width: 1024px) {
     .hero-title {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     
     .section-title {
@@ -1395,6 +1392,19 @@ body.dark-theme .footer {
     .footer-logo {
         margin: 0 auto;
     }
+    
+    .hero-title span.highlight {
+        font-size: 0.9em;
+    }
+    
+    .hero-title {
+        display: none;
+    }
+    
+    .hero-title-mobile {
+        display: block;
+        font-size: 3.5rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1403,7 +1413,8 @@ body.dark-theme .footer {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        letter-spacing: normal;
     }
     
     .section-title {
@@ -1434,6 +1445,8 @@ body.dark-theme .footer {
     .timeline-item {
         grid-template-columns: 15px 1fr;
     }
+    
+    /* Удален стиль для hero-word-2 */
 }
 
 @keyframes avatar-float {
@@ -2141,4 +2154,127 @@ body.dark footer {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Стили для темной темы */
+
+.hero-title-mobile {
+    display: none;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 900;
+}
+
+/* Удалены стили для мобильной версии заголовка */
+
+@media screen and (max-width: 768px) {
+    .hero-title {
+        display: none;
+    }
+    
+    .hero-title-mobile {
+        display: block;
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-title-mobile {
+        font-size: 3rem;
+    }
+}
+
+.hero-info {
+    background: #FFFFFF; /* Полностью непрозрачный белый фон */
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .hero-info {
+    background: #121212; /* Полностью непрозрачный темный фон */
+}
+
+/*--------------------------------------------------------------
+# Solid Title Styles
+--------------------------------------------------------------*/
+.solid-title-container {
+    margin-bottom: var(--spacing-lg);
+    background: #fff;
+    padding: 20px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.solid-title-container::before {
+    content: "BACKEND .NET DEVELOPER";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.05);
+    font-size: 6rem;
+    font-weight: 900;
+    white-space: nowrap;
+    z-index: 0;
+    text-transform: uppercase;
+}
+
+.solid-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0;
+    text-align: center;
+    text-shadow: none;
+    -webkit-text-stroke: 1px #000;
+}
+
+body.dark-theme .solid-title-container {
+    background: #000;
+    border-color: #fff;
+    box-shadow: 0 4px 0 #fff;
+}
+
+body.dark-theme .solid-title-container::before {
+    color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .solid-title {
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .solid-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .solid-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary);
+    text-align: center;
+    letter-spacing: normal;
+    text-shadow: none;
+}
+
+body.dark-theme .subtitle {
+    color: var(--color-primary-light);
 }
