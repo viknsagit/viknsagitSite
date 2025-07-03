@@ -378,6 +378,120 @@ function setupContactForm() {
     });
 }
 
+// Функция для оптимизации мобильной прокрутки при клике на ссылки
+function setupSmoothScrolling() {
+    const allLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+    
+    allLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Учитываем высоту шапки при прокрутке (мобильная версия имеет высоту 70px)
+                const headerHeight = window.innerWidth <= 768 ? 70 : 80;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                
+                window.scrollTo({
+                    top: targetPosition - headerHeight,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Оптимизация прокрутки на мобильных устройствах (предотвращение инерционной прокрутки)
+function optimizeMobileScroll() {
+    if ('ontouchstart' in window) {
+        const scrollableElements = document.querySelectorAll('.tech-tabs, .project-filters');
+        
+        scrollableElements.forEach(element => {
+            let isScrolling = false;
+            let startX, startY;
+            
+            element.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                isScrolling = true;
+            });
+            
+            element.addEventListener('touchmove', (e) => {
+                if (!isScrolling) return;
+                
+                const currentX = e.touches[0].clientX;
+                const currentY = e.touches[0].clientY;
+                
+                const diffX = startX - currentX;
+                const diffY = startY - currentY;
+                
+                // Если горизонтальная прокрутка больше вертикальной, предотвращаем прокрутку страницы
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+            
+            element.addEventListener('touchend', () => {
+                isScrolling = false;
+            });
+        });
+    }
+}
+
+// Оптимизация загрузки изображений для мобильных устройств
+function lazyLoadImages() {
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const image = entry.target;
+                    if (image.dataset.src) {
+                        image.src = image.dataset.src;
+                        image.removeAttribute('data-src');
+                    }
+                    observer.unobserve(image);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    } else {
+        // Запасной вариант для браузеров без поддержки IntersectionObserver
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            img.src = img.dataset.src;
+        });
+    }
+}
+
+// Оптимизация производительности для мобильных устройств
+function optimizeMobilePerformance() {
+    // Определяем, является ли устройство мобильным
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // Упрощаем некоторые анимации для мобильных устройств
+        document.querySelectorAll('.avatar-container, .tech-badge').forEach(el => {
+            el.style.animation = 'none';
+        });
+        
+        // Снижаем частоту обновления событий прокрутки для экономии ресурсов
+        let scrollTimeout;
+        const originalScrollHandler = window.onscroll;
+        
+        window.onscroll = function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                handleScroll();
+                setActiveNavLink();
+            }, 100);
+        };
+    }
+}
+
 // Инициализация всех функций при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     // Инициализация темы
@@ -422,4 +536,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Обработчик клика для мобильного меню
     document.getElementById('mobile-menu-toggle').addEventListener('click', toggleMobileMenu);
+    
+    // Добавляем новые функции для мобильной оптимизации
+    setupSmoothScrolling();
+    optimizeMobileScroll();
+    lazyLoadImages();
+    optimizeMobilePerformance();
+    
+    // Обработчик изменения размера экрана
+    window.addEventListener('resize', function() {
+        optimizeMobilePerformance();
+    });
 });
